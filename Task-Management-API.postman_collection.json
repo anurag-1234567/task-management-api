@@ -1,0 +1,143 @@
+{
+    "info": {
+        "name": "Task Management API",
+        "description": "Postman collection for the Node.js and Express Task Management assignment.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "http://localhost:3000"
+        },
+        {
+            "key": "taskId",
+            "value": "PASTE_TASK_ID_HERE"
+        }
+    ],
+    "item": [
+        {
+            "name": "Create Task",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"title\": \"Learn Express\",\n  \"description\": \"Complete the assignment\",\n  \"priority\": \"high\",\n  \"dueDate\": \"2026-12-15\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{baseUrl}}/api/tasks",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "api",
+                        "tasks"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Tasks",
+            "request": {
+                "method": "GET",
+                "url": "{{baseUrl}}/api/tasks"
+            }
+        },
+        {
+            "name": "Filter Tasks",
+            "request": {
+                "method": "GET",
+                "url": "{{baseUrl}}/api/tasks?status=pending&priority=high"
+            }
+        },
+        {
+            "name": "Search Tasks",
+            "request": {
+                "method": "GET",
+                "url": "{{baseUrl}}/api/tasks?search=express"
+            }
+        },
+        {
+            "name": "Get Task By ID",
+            "request": {
+                "method": "GET",
+                "url": "{{baseUrl}}/api/tasks/{{taskId}}"
+            }
+        },
+        {
+            "name": "Update Task",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"title\": \"Learn Node and Express\",\n  \"priority\": \"medium\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "{{baseUrl}}/api/tasks/{{taskId}}"
+            }
+        },
+        {
+            "name": "Update Task Status",
+            "request": {
+                "method": "PATCH",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"status\": \"completed\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "{{baseUrl}}/api/tasks/{{taskId}}/status"
+            }
+        },
+        {
+            "name": "Delete Task",
+            "request": {
+                "method": "DELETE",
+                "url": "{{baseUrl}}/api/tasks/{{taskId}}"
+            }
+        },
+        {
+            "name": "Task Statistics",
+            "request": {
+                "method": "GET",
+                "url": "{{baseUrl}}/api/tasks/stats"
+            }
+        },
+        {
+            "name": "Pagination and Sorting",
+            "request": {
+                "method": "GET",
+                "url": "{{baseUrl}}/api/tasks?page=1&limit=10&sortBy=createdAt&order=desc"
+            }
+        }
+    ]
+}

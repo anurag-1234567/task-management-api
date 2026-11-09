@@ -1,0 +1,52 @@
+[
+    {
+        "id": "3c237f82-8fb9-49b5-b51d-2bb0848385d2",
+        "title": "Learn Node.js",
+        "description": "Complete Node.js practical assignment",
+        "status": "completed",
+        "priority": "high",
+        "dueDate": "2026-12-15",
+        "createdAt": "2026-11-09T04:46:32.417Z",
+        "updatedAt": "2026-11-09T05:38:54.194Z"
+    },
+    {
+        "id": "6f21a1e9-22fb-4faa-8dfc-6af729090eb0",
+        "title": "Learn Express.js",
+        "description": "Understand Express routes and middleware",
+        "status": "completed",
+        "priority": "medium",
+        "dueDate": "2026-11-20",
+        "createdAt": "2026-11-09T04:50:31.306Z",
+        "updatedAt": "2026-11-09T05:40:47.527Z"
+    },
+    {
+        "id": "5f21e2cb-0cd5-403b-9065-dd585ec38179",
+        "title": "Learn",
+        "description": "Practicing backend development",
+        "status": "completed",
+        "priority": "medium",
+        "dueDate": "2026-11-25",
+        "createdAt": "2026-11-09T04:51:28.495Z",
+        "updatedAt": "2026-11-09T05:20:01.847Z"
+    },
+    {
+        "id": "984ae089-644b-4b60-befc-c5b8bb2ad3be",
+        "title": "Complete Backend Assignment",
+        "description": "Finish the task management project",
+        "status": "pending",
+        "priority": "high",
+        "dueDate": "2026-11-18",
+        "createdAt": "2026-11-09T04:51:52.120Z",
+        "updatedAt": "2026-11-09T05:45:01.719Z"
+    },
+    {
+        "id": "d4061b31-2bca-469d-92b0-099b7171aae3",
+        "title": "Learn REST API",
+        "description": "Practice API testing using Postman",
+        "status": "pending",
+        "priority": "medium",
+        "dueDate": "2026-11-30",
+        "createdAt": "2026-11-09T04:55:51.997Z",
+        "updatedAt": "2026-11-09T04:55:51.997Z"
+    }
+]
