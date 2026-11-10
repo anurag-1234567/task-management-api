@@ -13,6 +13,8 @@ function isValidDate(value) {
     return !Number.isNaN(Date.parse(value));
 }
 
+
+
 // Validate task fields before saving them
 function validateTaskFields(data, isNewTask = false) {
     const allowedFields = [
